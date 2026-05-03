@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050a0e">
+  <title>PeptidePilot — Private peptide tracker for iPhone</title>
+  <meta name="description" content="A private, on-device journal for tracking peptide doses, schedules, vials, and how each one makes you feel. No account, no tracking, no cloud.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="apple-touch-icon" href="icon.png">
+  <style>
+    :root {
+      --mint: #5cf2c7;
+      --mint-deep: #21b08d;
+      --bg-top: #0a1218;
+      --bg-bottom: #02060a;
+      --card: rgba(255,255,255,0.06);
+      --stroke: rgba(255,255,255,0.08);
+      --text: #f1f5f3;
+      --muted: rgba(255,255,255,0.55);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom)); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Rounded", "SF Pro", system-ui, sans-serif; line-height: 1.5; min-height: 100vh; }
+    body::before {
+      content: ""; position: fixed; inset: 0; pointer-events: none;
+      background: radial-gradient(circle at 22% 18%, rgba(92,242,199,0.15), transparent 55%);
+      z-index: 0;
+    }
+    main, header, footer { position: relative; z-index: 1; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    header { padding: 28px 24px; display: flex; align-items: center; justify-content: space-between; max-width: 980px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+    .brand img { width: 36px; height: 36px; border-radius: 8px; }
+    nav a { color: var(--muted); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .hero { max-width: 980px; margin: 0 auto; padding: 80px 24px 60px; text-align: center; }
+    .hero .eyebrow { font-size: 12px; letter-spacing: 1.6px; color: var(--mint); text-transform: uppercase; font-weight: 600; }
+    .hero h1 { font-size: clamp(40px, 6vw, 72px); font-weight: 800; letter-spacing: -0.025em; margin: 14px 0 18px; line-height: 1.05; }
+    .hero p.lede { font-size: 18px; color: var(--muted); max-width: 620px; margin: 0 auto 36px; }
+    .hero .cta-row { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; padding: 14px 22px; border-radius: 12px; font-weight: 600; font-size: 15px; transition: transform 0.15s; }
+    .btn:hover { transform: translateY(-1px); text-decoration: none; }
+    .btn.primary { background: linear-gradient(135deg, var(--mint), var(--mint-deep)); color: #021116; }
+    .btn.ghost { background: var(--card); color: var(--text); border: 1px solid var(--stroke); }
+
+    .features { max-width: 980px; margin: 0 auto; padding: 40px 24px 60px; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+    .feature { background: var(--card); border: 1px solid var(--stroke); border-radius: 16px; padding: 22px; }
+    .feature .icon { width: 36px; height: 36px; border-radius: 10px; background: rgba(92,242,199,0.12); display: flex; align-items: center; justify-content: center; margin-bottom: 14px; color: var(--mint); font-size: 18px; }
+    .feature h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .feature p { font-size: 14px; color: var(--muted); }
+
+    .privacy-banner { max-width: 980px; margin: 24px auto 0; padding: 0 24px; }
+    .privacy-banner .inner { background: rgba(92,242,199,0.06); border: 1px solid rgba(92,242,199,0.25); border-radius: 16px; padding: 28px; display: flex; gap: 18px; align-items: flex-start; }
+    .privacy-banner .inner .symbol { font-size: 28px; }
+    .privacy-banner h3 { font-size: 17px; margin-bottom: 6px; }
+    .privacy-banner p { color: var(--muted); font-size: 14px; }
+
+    footer { max-width: 980px; margin: 60px auto 0; padding: 30px 24px 50px; border-top: 1px solid var(--stroke); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 13px; }
+
+    /* Subpages */
+    .doc { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .doc .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    .doc h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; }
+    .doc p { color: rgba(255,255,255,0.82); margin-bottom: 14px; font-size: 15px; }
+    .doc ul { margin: 0 0 14px 24px; }
+    .doc ul li { color: rgba(255,255,255,0.82); font-size: 15px; margin-bottom: 6px; }
+    .doc strong { color: var(--text); }
+    .back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); margin-bottom: 24px; font-size: 13px; }
+    .back:hover { color: var(--mint); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="icon.png" alt="">
+      PeptidePilot
+    </div>
+    <nav>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">For iPhone, Apple Watch &amp; Mac</div>
+      <h1>Track every dose.<br>Notice every pattern.</h1>
+      <p class="lede">A private, on-device journal for peptide protocols. Schedules, vial inventory, side-effects ratings, and adherence insights — without an account, the cloud, or anyone else watching.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="#" id="appstore-link">Coming to the App Store</a>
+        <a class="btn ghost" href="#features">See features</a>
+      </div>
+    </section>
+
+    <section class="privacy-banner">
+      <div class="inner">
+        <div class="symbol">🔒</div>
+        <div>
+          <h3>Data Not Collected</h3>
+          <p>PeptidePilot has no servers, no analytics, no third-party SDKs, and no advertising. Everything you log lives only on your device. Backups are user-initiated and saved wherever you choose. We literally cannot see what you track.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="feature"><div class="icon">⏱</div><h3>Schedules &amp; alerts</h3><p>Per-peptide recurring schedules with local notifications. Log, snooze, or skip from the banner.</p></div>
+      <div class="feature"><div class="icon">𝑓</div><h3>Reconstitution math</h3><p>Vial size + BAC water + dose → units to draw. With warnings for unsafe combinations.</p></div>
+      <div class="feature"><div class="icon">🧪</div><h3>Vial inventory</h3><p>Doses remaining, expiry countdown, optional photo of each vial.</p></div>
+      <div class="feature"><div class="icon">📍</div><h3>Site rotation</h3><p>10-site grid. The app suggests the next site based on your history.</p></div>
+      <div class="feature"><div class="icon">📊</div><h3>Insights &amp; streaks</h3><p>Daily-dose chart, 7/30-day adherence, current and best streak.</p></div>
+      <div class="feature"><div class="icon">🌀</div><h3>Side-effects journal</h3><p>Quick 1–5 ratings for energy, mood, sleep, GI. See per-peptide correlations.</p></div>
+      <div class="feature"><div class="icon">🌱</div><h3>Cycle planner</h3><p>"Weeks on / weeks off" — schedule auto-pauses during off weeks.</p></div>
+      <div class="feature"><div class="icon">🏅</div><h3>Quiet medals</h3><p>Hex-shaped achievements for streaks, adherence, awareness, rotation.</p></div>
+      <div class="feature"><div class="icon">⌚</div><h3>Apple Watch + widgets</h3><p>Log a dose from your wrist. Lock Screen widget &amp; Dynamic Island countdown.</p></div>
+      <div class="feature"><div class="icon">💾</div><h3>Backup &amp; export</h3><p>JSON to iCloud Drive. PDF + CSV for your clinician.</p></div>
+      <div class="feature"><div class="icon">🔐</div><h3>Face ID lock</h3><p>Optional biometric gate when launching or returning from background.</p></div>
+      <div class="feature"><div class="icon">💻</div><h3>Mac + iPad</h3><p>Same app, runs on macOS via Mac Catalyst.</p></div>
+    </section>
+  </main>
+
+  <footer>
+    <span>PeptidePilot is a private journaling tool, not medical advice.</span>
+    <span>© <span id="year"></span> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

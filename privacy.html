@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050a0e">
+  <title>Privacy Policy — PeptidePilot</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    :root {
+      --mint: #5cf2c7;
+      --mint-deep: #21b08d;
+      --bg-top: #0a1218;
+      --bg-bottom: #02060a;
+      --card: rgba(255,255,255,0.06);
+      --stroke: rgba(255,255,255,0.08);
+      --text: #f1f5f3;
+      --muted: rgba(255,255,255,0.55);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom)); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; min-height: 100vh; line-height: 1.6; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .doc { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .doc .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    .doc h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; }
+    .doc p { color: rgba(255,255,255,0.82); margin-bottom: 14px; font-size: 15px; }
+    .doc ul { margin: 0 0 14px 24px; }
+    .doc ul li { color: rgba(255,255,255,0.82); font-size: 15px; margin-bottom: 6px; }
+    .doc strong { color: var(--text); }
+    .back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); margin-bottom: 24px; font-size: 13px; }
+    .back:hover { color: var(--mint); text-decoration: none; }
+  </style>
+</head>
+<body>
+  <article class="doc">
+    <a class="back" href="index.html">← PeptidePilot</a>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Last updated: 2026-05-02</p>
+
+    <p><strong>Plain English:</strong> PeptidePilot doesn't collect, store, or share any of your data. Everything you enter — peptides, schedules, dose logs, vial info, photos, ratings — lives only on your device. The app has no servers, no accounts, no analytics, no third-party trackers, and no advertising. We can't see what you log because there's no "we" on the other end.</p>
+
+    <h2>1. Who runs PeptidePilot</h2>
+    <p>PeptidePilot is published by an individual developer for personal-tracking purposes. We are not a healthcare provider, pharmacy, clinic, or peptide vendor. Contact: <a href="mailto:support@peptidepilot.app">support@peptidepilot.app</a></p>
+
+    <h2>2. What data the app handles</h2>
+    <p>The app stores the following on your device only:</p>
+    <ul>
+      <li>Peptide names and dose information you enter</li>
+      <li>Schedules and notification times</li>
+      <li>Dose logs — status, time, optional injection site, optional notes, optional 1–5 ratings</li>
+      <li>Vial inventory — size, BAC water, opened/expiry dates, optional photo</li>
+      <li>App preferences (Face ID toggle, default reminder lead time)</li>
+      <li>Achievements you've earned (stored in iOS UserDefaults)</li>
+    </ul>
+    <p>If you grant Apple Health access, the app reads your latest <strong>Body Mass</strong> sample for display only. It does not write to Apple Health.</p>
+    <p>If you grant photo library or camera permission, vial photos you take are stored in the app's local SwiftData store. They are not uploaded.</p>
+
+    <h2>3. What data we collect</h2>
+    <p><strong>None.</strong> The app makes no network calls of its own. There are no analytics SDKs, no crash reporting services, no advertising identifiers, no fingerprinting, and no telemetry.</p>
+    <p>Apple Push Notification Service is not used — all notifications are local, generated and scheduled by the app itself on your device.</p>
+
+    <h2>4. What data we share</h2>
+    <p><strong>None.</strong> We do not sell, share, lease, or otherwise disclose any data — because we never receive any.</p>
+
+    <h2>5. Backup, sync, and export</h2>
+    <p>If you choose to <strong>Create backup</strong> (Settings → Backup), the app generates a JSON file containing the data above. You decide where it goes — Files, iCloud Drive, AirDrop, email. Apple's iCloud Drive privacy policy applies if you save it there. We never see the file.</p>
+    <p>The PDF and CSV exports work the same way — generated locally, shared only where you send them.</p>
+
+    <h2>6. Children</h2>
+    <p>PeptidePilot is rated 17+ and is not directed at children. We do not knowingly handle data from anyone under 17.</p>
+
+    <h2>7. Apple App Store / TestFlight</h2>
+    <p>When you install the app from the App Store or TestFlight, Apple receives standard install metrics under their privacy policy. We see only the aggregate counts Apple shows in App Store Connect; we do not see who you are.</p>
+
+    <h2>8. Your rights</h2>
+    <p>Because no data leaves your device, the typical access/deletion requests under GDPR or CCPA are not relevant. To delete all your data: open the app, go to Settings, tap "Erase all data," or delete the app from your device.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If we change anything material, we will update the "Last updated" date and post the new policy at this URL. Continued use after a change means you accept the updated policy.</p>
+
+    <h2>10. Disclaimer</h2>
+    <p>PeptidePilot is a personal journal. It is not medical advice, does not diagnose or treat any condition, and does not sell or recommend peptides. Consult a licensed clinician before starting, stopping, or changing any peptide protocol.</p>
+  </article>
+</body>
+</html>

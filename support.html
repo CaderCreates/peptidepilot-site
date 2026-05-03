@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050a0e">
+  <title>Support — PeptidePilot</title>
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    :root {
+      --mint: #5cf2c7;
+      --mint-deep: #21b08d;
+      --bg-top: #0a1218;
+      --bg-bottom: #02060a;
+      --card: rgba(255,255,255,0.06);
+      --stroke: rgba(255,255,255,0.08);
+      --text: #f1f5f3;
+      --muted: rgba(255,255,255,0.55);
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom)); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; min-height: 100vh; line-height: 1.6; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .doc { max-width: 720px; margin: 0 auto; padding: 60px 24px 80px; }
+    .doc h1 { font-size: 36px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 8px; }
+    .doc .meta { color: var(--muted); font-size: 14px; margin-bottom: 32px; }
+    .doc h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; }
+    .doc h3 { font-size: 16px; font-weight: 600; margin: 20px 0 6px; }
+    .doc p { color: rgba(255,255,255,0.82); margin-bottom: 14px; font-size: 15px; }
+    .doc ul { margin: 0 0 14px 24px; }
+    .doc ul li { color: rgba(255,255,255,0.82); font-size: 15px; margin-bottom: 6px; }
+    .doc strong { color: var(--text); }
+    .back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); margin-bottom: 24px; font-size: 13px; }
+    .back:hover { color: var(--mint); text-decoration: none; }
+    .contact-card { background: var(--card); border: 1px solid var(--stroke); border-radius: 16px; padding: 22px; margin: 24px 0; }
+    .contact-card .email { font-size: 18px; font-weight: 600; color: var(--mint); }
+  </style>
+</head>
+<body>
+  <article class="doc">
+    <a class="back" href="index.html">← PeptidePilot</a>
+    <h1>Support</h1>
+    <p class="meta">Need help? Found a bug? Have a feature request?</p>
+
+    <div class="contact-card">
+      <h3 style="margin-top:0">Get in touch</h3>
+      <p>Email <a class="email" href="mailto:support@peptidepilot.app">support@peptidepilot.app</a> with your iOS version, device model, and a description of what happened. Screenshots help. Replies usually within a couple of business days.</p>
+    </div>
+
+    <h2>Frequently asked</h2>
+
+    <h3>Is my data private?</h3>
+    <p>Yes. Everything is stored on your device only. The app has no servers, no accounts, no analytics, no third-party SDKs. Read the full <a href="privacy.html">privacy policy</a>.</p>
+
+    <h3>Will my data sync between my iPhone and Mac / Apple Watch?</h3>
+    <p>Today's app is single-device by default. The Apple Watch companion mirrors iPhone data when paired. Mac Catalyst and iPhone share data through your Apple ID's app group container when both are signed into the same iCloud — but if your data isn't appearing across devices, use <strong>Settings → Backup → Create backup</strong> on the source device, save to iCloud Drive, and restore on the destination.</p>
+
+    <h3>I lost my data after deleting the app</h3>
+    <p>iOS deletes all app data when the app is removed. Without a backup, that data is gone — there's no cloud copy because we don't have a cloud. Going forward, use <strong>Settings → Backup → Create backup</strong> periodically to a location you control (iCloud Drive is recommended). Restore puts everything back exactly as it was.</p>
+
+    <h3>Notifications aren't firing</h3>
+    <p>Three things to check:</p>
+    <ul>
+      <li>iPhone <strong>Settings → Notifications → PeptidePilot</strong> — make sure Allow Notifications is on.</li>
+      <li>In PeptidePilot, edit the peptide and confirm <strong>Notifications</strong> is enabled in the Schedule editor.</li>
+      <li>Make sure Focus / Do Not Disturb isn't suppressing them — check Focus settings on iPhone.</li>
+    </ul>
+
+    <h3>The reconstitution calculator gave a weird answer</h3>
+    <p>Double-check that the units (mg / mcg / IU) match what's printed on your vial label. The calculator treats IU as 1:1 with mcg by default, which is correct for many peptides but not all — confirm your peptide's specific IU↔mass conversion before relying on the result.</p>
+
+    <h3>How do I add a peptide that's not in the catalog?</h3>
+    <p>In the Library tab, tap <strong>+</strong>. In the catalog picker, type the peptide's name in the "Custom peptide name" field at the top, then tap <strong>Use "&lt;name&gt;"</strong>. You'll get a fully editable peptide entry with no preset catalog info.</p>
+
+    <h3>Can I track non-peptide injectables (TRT, B12, etc.)?</h3>
+    <p>Yes. Use the custom peptide flow — name it whatever you like, set the dose and schedule, and you're tracking. The app doesn't care what the substance is.</p>
+
+    <h3>How do I cancel a schedule without deleting the history?</h3>
+    <p>Open the peptide → tap the <strong>•••</strong> menu → <strong>Pause</strong>. The peptide stays in your Library (greyed out under "Paused") with all its dose history intact, and notifications stop.</p>
+
+    <h3>Why was Melanotan II / Retatrutide / [other peptide] removed from the catalog?</h3>
+    <p>The bundled catalog covers a curated set of compounds with reasonably documented research. Some compounds are deliberately omitted because they're illegal to sell for human use in major markets, are pure investigational drugs not legally available, or don't have enough credible documentation for an educational summary. You can still track them as custom peptides — the app doesn't restrict that.</p>
+
+    <h3>How do I export my data for my clinician?</h3>
+    <p><strong>Settings → Export</strong> → choose CSV (a spreadsheet of every dose log) or PDF (formatted report with peptide list and adherence). Both can be shared via email or AirDrop.</p>
+
+    <h3>Is this medical advice?</h3>
+    <p>No. PeptidePilot is a journal. It does not diagnose, treat, recommend, or replace a clinician. Consult a licensed clinician before starting, stopping, or changing any peptide protocol.</p>
+
+    <h2>Feature requests</h2>
+    <p>Email the address above with the subject line <em>Feature request</em>. Most-requested ideas tend to land in updates within a few months.</p>
+
+    <h2>Bug reports</h2>
+    <p>Email with:</p>
+    <ul>
+      <li>iOS / iPadOS / macOS version</li>
+      <li>Device model</li>
+      <li>App version (Settings → About in the app)</li>
+      <li>Steps to reproduce</li>
+      <li>What you expected vs. what happened</li>
+      <li>Screenshots if relevant</li>
+    </ul>
+  </article>
+</body>
+</html>
