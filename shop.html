@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#050a0e">
+  <title>Shop — PeptidePilot</title>
+  <meta name="description" content="Curated clinical care providers and ancillary injection supplies for peptide users.">
+  <link rel="icon" type="image/png" href="icon.png">
+  <style>
+    :root {
+      --mint: #5cf2c7;
+      --mint-deep: #21b08d;
+      --bg-top: #0a1218;
+      --bg-bottom: #02060a;
+      --card: rgba(255,255,255,0.06);
+      --card-hover: rgba(255,255,255,0.10);
+      --stroke: rgba(255,255,255,0.08);
+      --text: #f1f5f3;
+      --muted: rgba(255,255,255,0.55);
+      --warm: #ffba36;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: linear-gradient(180deg, var(--bg-top), var(--bg-bottom)); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif; min-height: 100vh; line-height: 1.5; }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background: radial-gradient(circle at 22% 18%, rgba(92,242,199,0.12), transparent 55%); z-index: 0; }
+    main, header { position: relative; z-index: 1; }
+    a { color: var(--mint); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header { padding: 28px 24px; display: flex; align-items: center; justify-content: space-between; max-width: 1080px; margin: 0 auto; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
+    .brand img { width: 36px; height: 36px; border-radius: 8px; }
+    nav a { color: var(--muted); margin-left: 22px; font-size: 14px; font-weight: 500; }
+    nav a.active { color: var(--text); }
+    nav a:hover { color: var(--text); text-decoration: none; }
+
+    .hero { max-width: 720px; margin: 0 auto; padding: 60px 24px 24px; text-align: center; }
+    .hero .eyebrow { font-size: 11px; letter-spacing: 1.6px; color: var(--mint); text-transform: uppercase; font-weight: 600; }
+    .hero h1 { font-size: clamp(34px, 5vw, 52px); font-weight: 800; letter-spacing: -0.02em; margin: 12px 0 14px; line-height: 1.1; }
+    .hero p { color: var(--muted); font-size: 16px; }
+
+    .disclosure { max-width: 1080px; margin: 24px auto; padding: 0 24px; }
+    .disclosure-inner { background: rgba(255,186,54,0.06); border: 1px solid rgba(255,186,54,0.25); border-radius: 14px; padding: 16px 20px; display: flex; gap: 14px; align-items: flex-start; font-size: 13px; color: rgba(255,255,255,0.78); }
+    .disclosure-inner strong { color: var(--text); }
+
+    .section { max-width: 1080px; margin: 0 auto; padding: 32px 24px; }
+    .section-head { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 18px; gap: 16px; flex-wrap: wrap; }
+    .section-head h2 { font-size: 13px; letter-spacing: 1.6px; color: var(--muted); text-transform: uppercase; font-weight: 600; }
+    .section-head .blurb { color: var(--muted); font-size: 13px; max-width: 620px; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+
+    .card { background: var(--card); border: 1px solid var(--stroke); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 10px; transition: background 0.15s, transform 0.15s; }
+    .card:hover { background: var(--card-hover); transform: translateY(-1px); }
+    .card .brand-name { font-size: 11px; letter-spacing: 1.4px; color: var(--mint); text-transform: uppercase; font-weight: 600; }
+    .card h3 { font-size: 18px; font-weight: 700; }
+    .card p { color: var(--muted); font-size: 14px; flex: 1; }
+    .card .meta-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+    .pill { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 999px; background: rgba(92,242,199,0.10); color: var(--mint); font-size: 11px; font-weight: 600; border: 1px solid rgba(92,242,199,0.25); }
+    .card a.cta { display: inline-flex; align-items: center; gap: 6px; padding: 10px 14px; background: linear-gradient(135deg, var(--mint), var(--mint-deep)); color: #021116; font-weight: 700; font-size: 14px; border-radius: 10px; text-decoration: none; align-self: flex-start; }
+    .card a.cta:hover { transform: translateY(-1px); }
+
+    .supply-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+    .supply { background: var(--card); border: 1px solid var(--stroke); border-radius: 14px; padding: 16px; text-decoration: none; color: var(--text); display: flex; gap: 12px; transition: background 0.15s, transform 0.15s; align-items: flex-start; }
+    .supply:hover { background: var(--card-hover); transform: translateY(-1px); text-decoration: none; }
+    .supply .icon { width: 38px; height: 38px; border-radius: 10px; background: rgba(92,242,199,0.12); display: flex; align-items: center; justify-content: center; color: var(--mint); font-size: 18px; flex-shrink: 0; }
+    .supply h4 { font-size: 14px; font-weight: 600; margin-bottom: 3px; line-height: 1.3; }
+    .supply p { color: var(--muted); font-size: 12px; line-height: 1.4; }
+    .category-label { font-size: 11px; letter-spacing: 1.4px; color: var(--muted); text-transform: uppercase; font-weight: 600; margin: 24px 0 12px; }
+    .category-label:first-child { margin-top: 0; }
+
+    footer { max-width: 1080px; margin: 60px auto 0; padding: 30px 24px 50px; border-top: 1px solid var(--stroke); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; color: var(--muted); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <a href="index.html" class="brand">
+      <img src="icon.png" alt="">
+      PeptidePilot
+    </a>
+    <nav>
+      <a href="shop.html" class="active">Shop</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Curated partners</div>
+      <h1>Care &amp; supplies for peptide users.</h1>
+      <p>Vetted clinical-care providers and the ancillary gear we recommend. We don't sell, ship, or prescribe peptides — just point you at people and products who do, ethically.</p>
+    </section>
+
+    <div class="disclosure">
+      <div class="disclosure-inner">
+        <span style="font-size: 18px;">⚠️</span>
+        <div>
+          <strong>Disclosure.</strong> Some links on this page are affiliate or referral links — we may earn a commission if you sign up or purchase, at no extra cost to you. As an Amazon Associate we earn from qualifying purchases. Telehealth providers listed below have their own application processes and prescribing standards; we have no role in your care.
+        </div>
+      </div>
+    </div>
+
+    <!-- Telehealth -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Clinical care</h2>
+        <div class="blurb">Licensed US telehealth providers for FDA-approved GLP-1s, TRT, and related metabolic medicine. They handle the prescription, the pharmacy, and the follow-ups.</div>
+      </div>
+      <div class="grid">
+
+        <div class="card">
+          <span class="brand-name">Henry Meds</span>
+          <h3>Compounded GLP-1s, TRT, anti-aging</h3>
+          <p>Telehealth visit, prescription if appropriate, monthly delivery. Compounded semaglutide and tirzepatide programs starting around $300/mo.</p>
+          <div class="meta-row">
+            <span class="pill">GLP-1</span>
+            <span class="pill">TRT</span>
+            <span class="pill">Telehealth</span>
+          </div>
+          <a class="cta" href="https://henrymeds.com/?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Henry Meds →</a>
+        </div>
+
+        <div class="card">
+          <span class="brand-name">Ro</span>
+          <h3>Weight loss &amp; men's health</h3>
+          <p>Established US telehealth platform. Branded Wegovy/Zepbound and compounded options through licensed pharmacies, with check-ins and care team support.</p>
+          <div class="meta-row">
+            <span class="pill">GLP-1</span>
+            <span class="pill">Branded Rx</span>
+          </div>
+          <a class="cta" href="https://ro.co/?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Ro →</a>
+        </div>
+
+        <div class="card">
+          <span class="brand-name">Hone Health</span>
+          <h3>Men's hormone health</h3>
+          <p>Doctor-supervised TRT and metabolic optimization. At-home blood panels, video visits, mailed prescriptions if appropriate.</p>
+          <div class="meta-row">
+            <span class="pill">TRT</span>
+            <span class="pill">Lab work</span>
+          </div>
+          <a class="cta" href="https://honehealth.com/?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Hone →</a>
+        </div>
+
+        <div class="card">
+          <span class="brand-name">Eden Health</span>
+          <h3>Compounded weight-loss programs</h3>
+          <p>Telehealth weight-management with compounded GLP-1s, monthly subscriptions, and patient support.</p>
+          <div class="meta-row">
+            <span class="pill">GLP-1</span>
+            <span class="pill">Compounded</span>
+          </div>
+          <a class="cta" href="https://www.tryeden.com/?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Eden →</a>
+        </div>
+
+        <div class="card">
+          <span class="brand-name">Mochi Health</span>
+          <h3>Obesity-medicine specialists</h3>
+          <p>Board-certified obesity-medicine doctors. Personalized GLP-1 protocols (branded or compounded), labs, ongoing care.</p>
+          <div class="meta-row">
+            <span class="pill">GLP-1</span>
+            <span class="pill">Specialist</span>
+          </div>
+          <a class="cta" href="https://joinmochi.com/?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Mochi →</a>
+        </div>
+
+        <div class="card">
+          <span class="brand-name">Sequence (WW)</span>
+          <h3>Weight Watchers' clinical arm</h3>
+          <p>Sequence by WeightWatchers — telehealth weight-management combining medication management with behavioral coaching.</p>
+          <div class="meta-row">
+            <span class="pill">GLP-1</span>
+            <span class="pill">Coaching</span>
+          </div>
+          <a class="cta" href="https://www.weightwatchers.com/us/clinic?utm_source=peptidepilot&amp;utm_medium=referral" target="_blank" rel="noopener nofollow sponsored">Visit Sequence →</a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Supplies -->
+    <section class="section">
+      <div class="section-head">
+        <h2>Injection &amp; storage supplies</h2>
+        <div class="blurb">Curated ancillary gear from Amazon. We earn a small commission on qualifying purchases. Prices and availability are accurate at the time of viewing on Amazon.</div>
+      </div>
+
+      <div class="category-label">Injection</div>
+      <div class="supply-grid">
+        <a class="supply" href="https://www.amazon.com/s?k=insulin+syringes+0.5ml+29g+1%2F2+inch&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">💉</div><div><h4>Insulin Syringes 0.5 mL · 29G × ½″</h4><p>Standard insulin syringe for small subcutaneous volumes.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=insulin+syringes+1ml+30g+5%2F16&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">💉</div><div><h4>Insulin Syringes 1 mL · 30G × 5/16″</h4><p>Smaller-gauge needle for less injection-site soreness.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=luer+lock+syringes+1ml+sterile&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🩹</div><div><h4>Luer-Lock Syringes 1 mL</h4><p>Threaded luer-lock barrel for secure needle attachment.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=22+gauge+1.5+inch+sterile+needles&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🪡</div><div><h4>Drawing Needles · 22G × 1.5″</h4><p>For drawing from vials. Swap to a finer needle before injecting.</p></div></a>
+      </div>
+
+      <div class="category-label">Reconstitution</div>
+      <div class="supply-grid">
+        <a class="supply" href="https://www.amazon.com/s?k=bacteriostatic+water+30ml&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">💧</div><div><h4>Bacteriostatic Water · 30 mL</h4><p>0.9% benzyl alcohol sterile water for reconstitution.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=sterile+saline+0.9+single+use+vials&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">💧</div><div><h4>Sterile Saline · Single-Use Vials</h4><p>0.9% sodium chloride for reconstitution alternative.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=sterile+empty+vials+10ml+rubber+stopper&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🧪</div><div><h4>Sterile Empty Mixing Vials · 10 mL</h4><p>Rubber-stoppered vials for mixing or transferring.</p></div></a>
+      </div>
+
+      <div class="category-label">Skin prep</div>
+      <div class="supply-grid">
+        <a class="supply" href="https://www.amazon.com/s?k=sterile+alcohol+prep+pads+200+count&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🧼</div><div><h4>Sterile Alcohol Prep Pads · 200ct</h4><p>Individually wrapped 70% isopropyl pads.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=70+percent+isopropyl+alcohol+16+oz&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🧴</div><div><h4>70% Isopropyl Alcohol · 16 oz</h4><p>Bulk bottle for refilling spray bottles or wiping work surfaces.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=sterile+gauze+pads+individually+wrapped&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🩹</div><div><h4>Sterile Gauze Pads</h4><p>For light pressure on the injection site after withdrawal.</p></div></a>
+      </div>
+
+      <div class="category-label">Storage</div>
+      <div class="supply-grid">
+        <a class="supply" href="https://www.amazon.com/s?k=peptide+vial+organizer+refrigerator+tray&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">📦</div><div><h4>Refrigerator Vial Tray</h4><p>Keeps reconstituted vials upright and visible in the fridge.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=insulated+medication+travel+case+insulin&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">💼</div><div><h4>Insulated Travel Case</h4><p>Insulated zip case for travel with ice packs.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=refrigerator+thermometer+digital&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🌡️</div><div><h4>Mini-Fridge Thermometer</h4><p>Verify your fridge stays in the 36–46°F range.</p></div></a>
+      </div>
+
+      <div class="category-label">Disposal</div>
+      <div class="supply-grid">
+        <a class="supply" href="https://www.amazon.com/s?k=1+quart+sharps+container+fda+cleared&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">🗑️</div><div><h4>Sharps Container · 1 Quart</h4><p>FDA-cleared puncture-resistant sharps container.</p></div></a>
+        <a class="supply" href="https://www.amazon.com/s?k=sharps+mail+back+disposal+kit&amp;tag=PLACEHOLDER-20" target="_blank" rel="noopener nofollow sponsored"><div class="icon">📮</div><div><h4>Sharps Mail-Back Disposal Kit</h4><p>Pre-paid mail-back kit when local sharps disposal isn't available.</p></div></a>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer>
+    <span>PeptidePilot is a private journaling tool, not medical advice. We don't sell or ship peptides.</span>
+    <span>© <span id="year"></span> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a></span>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
