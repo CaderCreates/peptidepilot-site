@@ -1,6 +1,22 @@
 {
-  "updatedISO": "2026-05-05",
+  "updatedISO": "2026-05-13",
   "articles": [
+    {
+      "id": "surmount-1-tirzepatide-for-obesity-fc80fc",
+      "title": "SURMOUNT-1: Tirzepatide for obesity",
+      "summary": "Phase 3 trial of tirzepatide in adults with obesity (without diabetes). Demonstrated 22.5% mean body-weight reduction at the 15mg dose over 72 weeks.",
+      "source": "PubMed",
+      "sourceType": "pubmed",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35658024/",
+      "publishedISO": "2022-06-04",
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "tirzepatide"
+      ]
+    },
     {
       "id": "tirz-fda-mounjaro-label",
       "title": "Mounjaro (tirzepatide) prescribing information",
@@ -9,8 +25,13 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf",
       "publishedISO": "2022-05-13",
-      "categories": ["regulatory", "education"],
-      "peptideTags": ["tirzepatide"]
+      "categories": [
+        "regulatory",
+        "education"
+      ],
+      "peptideTags": [
+        "tirzepatide"
+      ]
     },
     {
       "id": "tirz-fda-zepbound-label",
@@ -20,8 +41,12 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/217806s000lbl.pdf",
       "publishedISO": "2023-11-08",
-      "categories": ["regulatory"],
-      "peptideTags": ["tirzepatide"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "tirzepatide"
+      ]
     },
     {
       "id": "sema-fda-wegovy-label",
@@ -31,8 +56,12 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2024/215256s011lbl.pdf",
       "publishedISO": "2024-03-08",
-      "categories": ["regulatory"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "sema-fda-ozempic-label",
@@ -42,8 +71,12 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2023/209637s022lbl.pdf",
       "publishedISO": "2023-03-29",
-      "categories": ["regulatory"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "fda-compounding-glp1-warning",
@@ -53,8 +86,13 @@
       "sourceType": "fda",
       "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/medications-containing-semaglutide-marketed-type-2-diabetes-or-weight-loss",
       "publishedISO": "2024-09-26",
-      "categories": ["safety", "regulatory"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "safety",
+        "regulatory"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "fda-compounding-overview",
@@ -64,8 +102,15 @@
       "sourceType": "fda",
       "url": "https://www.fda.gov/drugs/human-drug-compounding",
       "publishedISO": "2024-01-15",
-      "categories": ["regulatory", "education"],
-      "peptideTags": ["semaglutide", "tirzepatide", "sermorelin"]
+      "categories": [
+        "regulatory",
+        "education"
+      ],
+      "peptideTags": [
+        "semaglutide",
+        "tirzepatide",
+        "sermorelin"
+      ]
     },
     {
       "id": "surpass-1-tirzepatide-monotherapy",
@@ -75,8 +120,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/34186022/",
       "publishedISO": "2021-07-08",
-      "categories": ["clinical", "study"],
-      "peptideTags": ["tirzepatide"]
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "tirzepatide"
+      ]
     },
     {
       "id": "step-1-semaglutide-weight",
@@ -86,8 +136,13 @@
       "sourceType": "nejm",
       "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2032183",
       "publishedISO": "2021-03-18",
-      "categories": ["clinical", "study"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "select-cv-semaglutide",
@@ -97,8 +152,13 @@
       "sourceType": "nejm",
       "url": "https://www.nejm.org/doi/full/10.1056/NEJMoa2307563",
       "publishedISO": "2023-11-11",
-      "categories": ["clinical", "study"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "bpc157-review-sikiric",
@@ -108,8 +168,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26514788/",
       "publishedISO": "2015-10-21",
-      "categories": ["study", "education"],
-      "peptideTags": ["bpc-157"]
+      "categories": [
+        "study",
+        "education"
+      ],
+      "peptideTags": [
+        "bpc-157"
+      ]
     },
     {
       "id": "tb500-thymosin-review",
@@ -119,8 +184,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/22361736/",
       "publishedISO": "2012-02-23",
-      "categories": ["study", "education"],
-      "peptideTags": ["tb-500"]
+      "categories": [
+        "study",
+        "education"
+      ],
+      "peptideTags": [
+        "tb-500"
+      ]
     },
     {
       "id": "ipa-cjc-secretagogue-review",
@@ -130,8 +200,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/9849822/",
       "publishedISO": "1998-12-01",
-      "categories": ["study"],
-      "peptideTags": ["ipamorelin"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "ipamorelin"
+      ]
     },
     {
       "id": "cjc-1295-modified-grf",
@@ -141,8 +215,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/16352683/",
       "publishedISO": "2005-12-13",
-      "categories": ["study"],
-      "peptideTags": ["cjc-1295"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "cjc-1295"
+      ]
     },
     {
       "id": "ghk-cu-skin-research",
@@ -152,8 +230,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26513058/",
       "publishedISO": "2015-08-13",
-      "categories": ["study", "education"],
-      "peptideTags": ["ghk-cu"]
+      "categories": [
+        "study",
+        "education"
+      ],
+      "peptideTags": [
+        "ghk-cu"
+      ]
     },
     {
       "id": "epitalon-aging-russian",
@@ -163,8 +246,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/12937682/",
       "publishedISO": "2003-08-01",
-      "categories": ["study"],
-      "peptideTags": ["epitalon"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "epitalon"
+      ]
     },
     {
       "id": "thymosin-alpha1-immune",
@@ -174,8 +261,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/30240035/",
       "publishedISO": "2018-09-21",
-      "categories": ["study", "education"],
-      "peptideTags": ["thymosin-alpha-1"]
+      "categories": [
+        "study",
+        "education"
+      ],
+      "peptideTags": [
+        "thymosin-alpha-1"
+      ]
     },
     {
       "id": "wada-2025-prohibited",
@@ -185,8 +277,16 @@
       "sourceType": "wada",
       "url": "https://www.wada-ama.org/sites/default/files/2024-09/2025list_en_final_clean_12_september_2024.pdf",
       "publishedISO": "2024-09-12",
-      "categories": ["regulatory"],
-      "peptideTags": ["bpc-157", "tb-500", "ipamorelin", "cjc-1295", "hgh-fragment-176-191"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "bpc-157",
+        "tb-500",
+        "ipamorelin",
+        "cjc-1295",
+        "hgh-fragment-176-191"
+      ]
     },
     {
       "id": "pt141-vyleesi-label",
@@ -196,8 +296,12 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2019/210557s000lbl.pdf",
       "publishedISO": "2019-06-21",
-      "categories": ["regulatory"],
-      "peptideTags": ["pt-141"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "pt-141"
+      ]
     },
     {
       "id": "tesamorelin-egrifta-label",
@@ -207,8 +311,12 @@
       "sourceType": "fda",
       "url": "https://www.accessdata.fda.gov/drugsatfda_docs/label/2010/022505lbl.pdf",
       "publishedISO": "2010-11-10",
-      "categories": ["regulatory"],
-      "peptideTags": ["tesamorelin"]
+      "categories": [
+        "regulatory"
+      ],
+      "peptideTags": [
+        "tesamorelin"
+      ]
     },
     {
       "id": "cdc-safe-injection",
@@ -218,7 +326,10 @@
       "sourceType": "cdc",
       "url": "https://www.cdc.gov/injection-safety/about/safe-injection-practices.html",
       "publishedISO": "2024-04-15",
-      "categories": ["safety", "education"],
+      "categories": [
+        "safety",
+        "education"
+      ],
       "peptideTags": []
     },
     {
@@ -229,8 +340,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/25738459/",
       "publishedISO": "2015-03-04",
-      "categories": ["study"],
-      "peptideTags": ["mots-c"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "mots-c"
+      ]
     },
     {
       "id": "selank-anxiolytic",
@@ -240,8 +355,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/27029017/",
       "publishedISO": "2016-04-01",
-      "categories": ["study"],
-      "peptideTags": ["selank"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "selank"
+      ]
     },
     {
       "id": "semax-neuroprotection",
@@ -251,8 +370,12 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/28091994/",
       "publishedISO": "2017-01-13",
-      "categories": ["study"],
-      "peptideTags": ["semax"]
+      "categories": [
+        "study"
+      ],
+      "peptideTags": [
+        "semax"
+      ]
     },
     {
       "id": "aod-9604-clinical",
@@ -262,8 +385,13 @@
       "sourceType": "pubmed",
       "url": "https://pubmed.ncbi.nlm.nih.gov/19528319/",
       "publishedISO": "2009-06-15",
-      "categories": ["study", "clinical"],
-      "peptideTags": ["aod-9604"]
+      "categories": [
+        "study",
+        "clinical"
+      ],
+      "peptideTags": [
+        "aod-9604"
+      ]
     },
     {
       "id": "compounded-glp1-faq-fda",
@@ -273,8 +401,14 @@
       "sourceType": "fda",
       "url": "https://www.fda.gov/drugs/postmarket-drug-safety-information-patients-and-providers/fda-warns-consumers-not-use-counterfeit-ozempic",
       "publishedISO": "2024-04-09",
-      "categories": ["safety", "regulatory"],
-      "peptideTags": ["semaglutide", "tirzepatide"]
+      "categories": [
+        "safety",
+        "regulatory"
+      ],
+      "peptideTags": [
+        "semaglutide",
+        "tirzepatide"
+      ]
     },
     {
       "id": "step-2-semaglutide-t2d",
@@ -284,8 +418,13 @@
       "sourceType": "lancet",
       "url": "https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(21)00213-0/fulltext",
       "publishedISO": "2021-03-13",
-      "categories": ["clinical", "study"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "step-tirz-vs-sema-comparison",
@@ -295,8 +434,14 @@
       "sourceType": "jama",
       "url": "https://jamanetwork.com/journals/jamainternalmedicine/fullarticle/2820035",
       "publishedISO": "2024-07-08",
-      "categories": ["clinical", "study"],
-      "peptideTags": ["tirzepatide", "semaglutide"]
+      "categories": [
+        "clinical",
+        "study"
+      ],
+      "peptideTags": [
+        "tirzepatide",
+        "semaglutide"
+      ]
     },
     {
       "id": "stat-pharmacy-calc",
@@ -306,7 +451,9 @@
       "sourceType": "nih",
       "url": "https://www.ncbi.nlm.nih.gov/books/NBK493162/",
       "publishedISO": "2023-08-08",
-      "categories": ["education"],
+      "categories": [
+        "education"
+      ],
       "peptideTags": []
     },
     {
@@ -317,8 +464,12 @@
       "sourceType": "drugbank",
       "url": "https://go.drugbank.com/drugs/DB13928",
       "publishedISO": "2024-01-01",
-      "categories": ["education"],
-      "peptideTags": ["semaglutide"]
+      "categories": [
+        "education"
+      ],
+      "peptideTags": [
+        "semaglutide"
+      ]
     },
     {
       "id": "drugbank-tirzepatide",
@@ -328,8 +479,12 @@
       "sourceType": "drugbank",
       "url": "https://go.drugbank.com/drugs/DB15171",
       "publishedISO": "2024-01-01",
-      "categories": ["education"],
-      "peptideTags": ["tirzepatide"]
+      "categories": [
+        "education"
+      ],
+      "peptideTags": [
+        "tirzepatide"
+      ]
     }
   ]
 }
