@@ -59,8 +59,9 @@
     <p>If you grant photo library or camera permission, vial photos you take are stored in the app's local SwiftData store. They are not uploaded.</p>
 
     <h2>3. What data we collect</h2>
-    <p><strong>None.</strong> The app makes no network calls of its own. There are no analytics SDKs, no crash reporting services, no advertising identifiers, no fingerprinting, and no telemetry.</p>
+    <p><strong>None.</strong> There are no analytics SDKs, no crash reporting services, no advertising identifiers, no fingerprinting, and no telemetry.</p>
     <p>Apple Push Notification Service is not used — all notifications are local, generated and scheduled by the app itself on your device.</p>
+    <p>One feature requires a network call: the in-app Research library (Settings → Tools → Research library). When opened, the app fetches a single public JSON file from <code>cadercreates.github.io/peptidepilot-site/research.json</code> listing curated FDA labels, PubMed papers, and clinical-trial summaries. The request contains no information about you — it is the same kind of unauthenticated fetch any RSS reader makes. The file is cached on your device for 24 hours so subsequent opens work offline.</p>
 
     <h2>4. What data we share</h2>
     <p><strong>None.</strong> We do not sell, share, lease, or otherwise disclose any data — because we never receive any.</p>
